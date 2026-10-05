@@ -1,0 +1,7 @@
+*.pdf
+*.docs
+.idea/
+__pycache__/
+scratch/
+*.svg
+

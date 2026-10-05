@@ -193,7 +193,7 @@ for k, v in dict(yr_mode=YEAR_ALL, custom_years=all_years, era=ERA_NONE, months=
     st.session_state.setdefault(k, v)
 
 with st.sidebar:
-    st.image("https://img.icons8.com/isometric/100/analytics.png", width=70)
+    # st.image("https://img.icons8.com/isometric/100/analytics.png", width=70)
     st.title("CBSL Analytics")
     st.caption("Macroeconomic & Power Grid Decision Support System")
     st.button("🔄 Reset all filters", on_click=reset_filters, use_container_width=True)
@@ -497,7 +497,7 @@ with tab3:
         diff1 = st.number_input("Yesterday vs day-before change (MW)", step=5.0, key="t3_d1")
         daily_energy = st.number_input("Total Daily Energy Output (GWh)", step=0.5, key="t3_en")
         hydro_share = st.slider("Hydropower Generation Share (%)", 0.0, 100.0, key="t3_hy")
-        coal_share = st.slider("Thermal Coal Generation Share (%)", 0.0, 100.0, key="t3_co")
+        # coal_share = st.slider("Thermal Coal Generation Share (%)", 0.0, 100.0, key="t3_co")
         target_date = st.date_input("Target Prediction Date", value=datetime.now() + timedelta(days=1))
         conf = st.radio("Confidence band", ["±1 RMSE (~68%)", "±1.96 RMSE (~95%)", "±2.58 RMSE (~99%)"], horizontal=True)
         mult = {"±1 RMSE (~68%)": 1.0, "±1.96 RMSE (~95%)": 1.96, "±2.58 RMSE (~99%)": 2.58}[conf]
