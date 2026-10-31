@@ -75,7 +75,8 @@ def add_time_nav(fig):
 # ==============================================================================
 # 2. DATA PIPELINE  (UNCHANGED)
 # ==============================================================================
-CSV_PATH = "cbsl_daily_economic_indicators_2020_2026_preprocesd.csv"
+import os
+CSV_PATH = "cbsl_daily_economic_indicators_2020_2026_preprocesd.csv" if os.path.exists("cbsl_daily_economic_indicators_2020_2026_preprocesd.csv") else os.path.join(os.path.dirname(__file__), "data", "processed", "cbsl_daily_economic_indicators_2020_2026_preprocesd.csv")
 
 @st.cache_data(show_spinner=False)
 def load_and_preprocess_data():
